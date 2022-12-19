@@ -1,4 +1,5 @@
-import { Component, HostListener, NgModule, OnInit } from '@angular/core';
+import { Component, HostListener, Input, NgModule, OnInit } from '@angular/core';
+import { CarouselService } from 'src/app/services/users/carousel/carousel.service';
 
 @Component({
   selector: 'app-carousel',
@@ -52,7 +53,11 @@ export class CarouselComponent implements OnInit {
 
 
 
-  constructor() { }
+  constructor() {
+    CarouselService: CarouselService({
+      this.items = this.
+    });
+  }
 
 
   private setItemsToShow(innerWidth: number): void {
