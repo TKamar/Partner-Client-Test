@@ -1,0 +1,11 @@
+<div>
+
+  <form [formGroup]="loginForm">
+    <Label>Enter Your Name: </Label>
+    <input formControlName="userName" type="text">
+    <div *ngIf="loginForm.controls['userName'].invalid && (loginForm.controls['userName'].dirty || loginForm.controls['userName'].touched)">{{loginForm.controls['userName'].errors?.['error']}}</div>
+    <button (click)="next()">Next</button>
+  </form>
+
+
+</div>
