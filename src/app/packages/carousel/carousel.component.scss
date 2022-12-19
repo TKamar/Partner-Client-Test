@@ -3,6 +3,9 @@
   margin: 30px auto;
   text-align: center;
   background-image: '../assets/images/packs_BG.png';
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .carousel-background{
@@ -14,4 +17,22 @@
   justify-content: center;
   flex-direction: row;
   // background-image: url("../assets/images/packs_BG.png");
+}
+
+.right-arrow{
+  background-image: '../assets/images/arrows.png';
+  color: black;
+}
+
+.ledt-arrow{
+  background-image: '../assets/images/arrows.png';
+  color: black;
+}
+
+.arrow{
+  position: relative;
+  border: 2px solid black;
+  width: 100px;
+  height: 20px;
+  margin-top: 50%;
 }

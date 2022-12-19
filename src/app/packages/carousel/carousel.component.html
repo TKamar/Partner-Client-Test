@@ -1,10 +1,12 @@
 
 <div class="main-container">
   <!-- <img class="carousel-background" src="../assets/images/packs_BG.png" alt=""> -->
-  <div class="carousel-container">
+  <div class="right-arrow arrow"></div>
+  <div class="carousel-container carousel-cell">
 
-      <div class="carousel" *ngFor="let item of getItems()"><app-carousel-item [item]="item"></app-carousel-item></div>
+      <div class="carousel-cell" *ngFor="let item of getItems()"><app-carousel-item [item]="item"></app-carousel-item></div>
   </div>
-
+  <div class="left-arrow arrow"></div>
 </div>
+
 
