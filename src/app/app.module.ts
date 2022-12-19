@@ -14,7 +14,8 @@ import { PackagesModule } from './packages/packages.module';
     BrowserModule,
     AppRoutingModule,
     LoginModule,
-    PackagesModule
+    PackagesModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

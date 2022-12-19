@@ -12,10 +12,11 @@ import { AdvantagesComponent } from './advantages/advantages.component';
     PackgesPageComponent,
     CarouselComponent,
     CarouselItemComponent,
-    AdvantagesComponent
+    AdvantagesComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule,
+
   ],
   exports: [
     PackgesPageComponent

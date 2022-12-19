@@ -1,8 +1,8 @@
-<div>
+<div id="main-container">
 
   <form [formGroup]="loginForm">
-    <Label>Enter Your Name: </Label>
-    <input formControlName="userName" type="text">
+    <Label>שם משתמש: </Label>
+    <input formControlName="userName" type="text" pattern="^[a-zA-Z\-\u0590-\u05FF ]+$">
     <div *ngIf="loginForm.controls['userName'].invalid && (loginForm.controls['userName'].dirty || loginForm.controls['userName'].touched)">{{loginForm.controls['userName'].errors?.['error']}}</div>
     <button (click)="next()">Next</button>
   </form>

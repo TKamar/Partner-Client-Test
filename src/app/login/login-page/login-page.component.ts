@@ -24,17 +24,21 @@ export class LoginPageComponent implements OnInit {
   private buildForm(): void {
 
     const usernameValidation: ValidatorFn = (control: AbstractControl) => {
-      const usernameValue: String = control.value;
+      const usernameValue: string = control.value;
+      const regexChars = RegExp("^[a-zA-Z\-\u0590-\u05FF ]+$");
       if (usernameValue.length == 0) {
-        return { error: 'Username Is Empty.' };
+        return { error: 'שם המשתמש אינו יכול להיות ריק.' };
       }
       if (usernameValue.length > 10) {
-        return { error: 'Username length cant be over 10 chars.' };
+        return { error: 'על שם המשתמש להיות עד 10 תווים.' };
       }
       if (usernameValue.length < 5) {
-        return { error: 'Username Is Empty.' };
+        return { error: 'על שם המשתמש להכיל לפחות 5 תווים.' };
       }
-      return null;
+      if (!regexChars.test(usernameValue)) {
+        return { error: 'על שם המשתמש להכיל תווים בעברית ובאנגלית בלבד.' };
+      }
+      else return null;
     }
 
     this.loginForm = this.fb.group({
@@ -47,6 +51,7 @@ export class LoginPageComponent implements OnInit {
   public next(): void {
     if (this.loginForm.invalid)
       return;
+
     this.usersService.login(this.loginForm.value.userName);
     this.router.navigate(['./packages']);
   }
