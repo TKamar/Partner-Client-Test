@@ -15,6 +15,9 @@
       background-image: url("/assets/images/package_bg_selected.png");
 
     }
+    .package-deal-type{
+      color: white;
+    }
   }
 }
 
@@ -27,9 +30,6 @@
 
   &:hover {
     background-image: url("/assets/images/package_bg_selected.png");
-    .package-deal-type{
-      color: white;
-    }
   }
 }
 
