@@ -14,7 +14,7 @@ export class AdvantagesComponent implements OnInit {
     { img: "/assets/images/video.png", text: "6 שעות צפייה בוידאו באיכות HD" },
     { img: "/assets/images/chat.png", text: "לשלוח או לקבל 240,000 תמונות או 12,000,000 הודעות" },
     { img: "/assets/images/music.png", text: "לנגן 3984 שירים" },
-    { img: "/assets/images/like.png", text: "לבלות 132 שעות ברשתות החברתיות" },
+    { img: "/assets/images/like.png", text: "לבלות 132 שעות ברשתות החברתיות" }, {}
   ];
 
   constructor() { }

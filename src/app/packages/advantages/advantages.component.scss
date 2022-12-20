@@ -1,5 +1,4 @@
 body{
-  font-size: 23px;
   font-family: 'simpler-regular';
 }
 
@@ -12,23 +11,21 @@ body{
 
 .items-container{
   display: flex;
-  flex-direction: row;
-  justify-content: center;
   flex-wrap: wrap;
 
 }
 
 .adv-obj {
-  width: calc(100% * (1/4) - 20px);
   display: flex;
   justify-content: center;
-  margin: 0 0 4px 2px;
+  flex: 1 1 400px;
   font-size: 23px;
 
   &> div {
     text-align: right;
-    max-width: 131px;
-    margin-right: 10px;
+    max-width: 170px;
+    max-height: 50px;
+    margin-right: 5px;
     margin-top: 15px;
     line-break: strict;
   }
