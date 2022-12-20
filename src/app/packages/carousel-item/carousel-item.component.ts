@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { CarouselService } from 'src/app/services/users/carousel/carousel.service';
 import { CarouselSlider } from '../carousel/carousel.component';
 
 @Component({
@@ -9,14 +8,12 @@ import { CarouselSlider } from '../carousel/carousel.component';
 })
 export class CarouselItemComponent implements OnInit {
 
-  @Input() item: any;
+  @Input() item: CarouselSlider;
 
   public sliderList: CarouselSlider[] = []
 
 
-  constructor(private carouselService: CarouselService) {
-    this.sliderList = carouselService.getSlidersList();
-  }
+  constructor() { }
 
   ngOnInit(): void {
   }

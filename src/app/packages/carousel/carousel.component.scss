@@ -1,8 +1,8 @@
 .main-container{
-  width: 35%;
+  // width: 35%;
   margin: 30px auto;
   text-align: center;
-  background-image: '../assets/images/packs_BG.png';
+  background-image: url("/assets/images/packs_BG.png");
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -16,23 +16,19 @@
   display: flex;
   justify-content: center;
   flex-direction: row;
-  // background-image: url("../assets/images/packs_BG.png");
 }
 
 .right-arrow{
-  background-image: '../assets/images/arrows.png';
-  color: black;
+  background-image: url("/assets/images/rightArrow.png");
 }
 
 .ledt-arrow{
-  background-image: '../assets/images/arrows.png';
-  color: black;
+  background-image: url("/assets/images/leftArrow.png");
 }
 
 .arrow{
-  position: relative;
-  border: 2px solid black;
-  width: 100px;
-  height: 20px;
-  margin-top: 50%;
+  width: 45px;
+  height: 51px;
+  margin-top: 300px;
+  border: none;
 }

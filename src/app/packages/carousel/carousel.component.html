@@ -1,12 +1,16 @@
 
 <div class="main-container">
   <!-- <img class="carousel-background" src="../assets/images/packs_BG.png" alt=""> -->
-  <div class="right-arrow arrow"></div>
+  <div>
+    <button (click)="prevItem()" class="right-arrow arrow"></button>
+  </div>
   <div class="carousel-container carousel-cell">
 
       <div class="carousel-cell" *ngFor="let item of getItems()"><app-carousel-item [item]="item"></app-carousel-item></div>
   </div>
-  <div class="left-arrow arrow"></div>
+  <div>
+    <button (click)="nextItem()" class="left-arrow arrow"></button>
+  </div>
 </div>
 
 

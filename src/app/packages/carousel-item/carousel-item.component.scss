@@ -5,13 +5,32 @@
   // justify-content: center;
   display: grid;
   flex-direction: column;
+  transition: transform .2s;
+  margin: 0 10px;
+  // background-image: url("/assets/images/package_bg_selected.png");
+
+&:hover {
+    transform: scale(1.1);
+    .header {
+      background-image: url("/assets/images/package_bg_selected.png");
+
+    }
+  }
 }
+
 
 .header{
   // background-image: url("../assets/images/package_bg_selected.png");
   display: flex;
   justify-content: center;
+  background-image: url("/assets/images/package_bg.png");
 
+  &:hover {
+    background-image: url("/assets/images/package_bg_selected.png");
+    .package-deal-type{
+      color: white;
+    }
+  }
 }
 
 .header-background-img{
@@ -24,13 +43,18 @@
   text-align: center;
   right: 60px;
   top: -10px;
-  background-image: '../assets/images/yellow_icon.png';
 }
+
 
 .header-addition-text{
   position: absolute;
   left: 0;
   direction: rtl;
+}
+
+.header-addition-img{
+  background-image: url("/assets/images/yellow_icon.png");
+z-index: 1;
 }
 
 .price-container {
@@ -41,7 +65,7 @@
 .package-deal-type{
   font-size: 30px;
   font-family: 'simpler-black';
-  color: white;
+  color: black;
 }
 
 .main-price{
@@ -54,6 +78,7 @@
   font-family: 'simpler-bold';
   color: aqua;
 }
+
 
 .money-symvol{
   font-size: 24px;
@@ -118,3 +143,4 @@ hr{
   font-size: 18px;
   font-family: 'simpler-bold';
 }
+

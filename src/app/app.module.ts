@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginModule } from './login/login.module';
 import { PackagesModule } from './packages/packages.module';
-import { IvyCarouselModule } from 'angular-responsive-carousel';
 
 @NgModule({
   declarations: [
@@ -16,7 +15,7 @@ import { IvyCarouselModule } from 'angular-responsive-carousel';
     AppRoutingModule,
     LoginModule,
     PackagesModule,
-    IvyCarouselModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

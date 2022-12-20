@@ -1,8 +1,10 @@
-<div *ngFor="let item of adavntagesList"></div>
 
-<div class="main-container">
-  <div class="adv-obj">
-    <img src="../assets/images/earth.png" alt="">
-    <div class="txt">גלישה ב15,000 עמודי אינטרנט</div>
+
+<div class="main-container"> <!-- flex and center-->
+  <div class="items-container" > <!-- flex limit 4 in a row -->
+    <div *ngFor="let item of advantagesList" class="adv-obj">
+      <img src="{{item.img}}" alt="">
+      <div class="txt">{{item.text}}</div>
+    </div>
   </div>
 </div>

@@ -1,5 +1,4 @@
 import { Component, HostListener, Input, NgModule, OnInit } from '@angular/core';
-import { CarouselService } from 'src/app/services/users/carousel/carousel.service';
 
 @Component({
   selector: 'app-carousel',
@@ -37,7 +36,7 @@ export class CarouselComponent implements OnInit {
     },
     {
       img: '../assets/images/package_bg.png',
-      packageDeal: '',
+      packageDeal: 'החבילה המורחבת',
       moneySymbol: '₪',
       price: 69,
       additionPrice: 9,
@@ -47,17 +46,24 @@ export class CarouselComponent implements OnInit {
       bodyThirdTitle: '1000 דקות לחו"ל',
       bodyFirstInnerTitle: 'בלעדי למזמינים באתר',
       bodySecondInnerTitle: 'כרטיס SIM במתנה'
+    },
+    {
+      img: '../assets/images/package_bg.png',
+      packageDeal: 'החבילה הבסיסית',
+      moneySymbol: '₪',
+      price: 59,
+      additionPrice: 9,
+      dealDuration: 'לחודש',
+      bodyFirstTitle: 'ללא הגבלת SMS שיחות והודעות',
+      bodySecondTitle: 'חבילת גלישה בנפח 15GB',
+      bodyThirdTitle: '100 דקות לחו"ל',
+      bodyFirstInnerTitle: 'בלעדי למזמינים באתר',
+      bodySecondInnerTitle: 'CyberGuard לשנה ללא עלות'
     },];
   private startIndex: number = 0;
   private itemsToShow: number = 0;
 
-
-
-  constructor() {
-    CarouselService: CarouselService({
-      this.items = this.
-    });
-  }
+  constructor() { }
 
 
   private setItemsToShow(innerWidth: number): void {
@@ -75,6 +81,21 @@ export class CarouselComponent implements OnInit {
     return this.items.slice(this.startIndex, this.itemsToShow + this.startIndex);
   }
 
+  public nextItem() {
+    const len: number = this.items.length;
+    if (this.startIndex == len - 1 || (len - 1) - this.startIndex < this.itemsToShow) {
+      return
+    }
+    this.startIndex++;
+  }
+
+  public prevItem() {
+    if (this.startIndex == 0) {
+      return
+    }
+    this.startIndex--;
+  }
+
   @HostListener('window:resize')
   onResize() {
     this.setItemsToShow(window.innerWidth);
@@ -83,8 +104,6 @@ export class CarouselComponent implements OnInit {
   ngOnInit() {
     this.setItemsToShow(window.innerWidth);
   }
-
-
 }
 
 export interface CarouselSlider {

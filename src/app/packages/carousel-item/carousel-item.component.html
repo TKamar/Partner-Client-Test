@@ -1,21 +1,18 @@
-
-
-
 <div class="main-container">
   <div class="header">
     <div class="header-addition">
-      <img src="" alt="">
+      <img src="/assets/images/yellow_icon.png" alt="">
       <span class="header-addition-text">בלעדי באתר!</span>
     </div>
-    <img class="header-background-img" src="../assets/images/package_bg_selected.png" alt="">
+  <img class="header-background-img" alt="">
     <div>
-      <span class="package-deal-type">החבילה המוזלת</span>
+      <span class="package-deal-type">{{item.packageDeal}}</span>
       <div class="price-container">
         <span class="money-symvol">₪</span>
-        <span class="main-price">49.</span>
-        <span class="addition-to-price">9</span>
+        <span class="main-price">{{item.price}}</span>
+        <span class="addition-to-price">{{item.additionPrice}}</span>
       </div>
-      <span class="per-periot">לחודש</span>
+      <span class="per-periot">{{item.dealDuration}}</span>
     </div>
   </div>
 
@@ -23,20 +20,18 @@
   <div class="ad-body">
     <div class="body-container">
 
-      <div class="regular-style">ללא הגבלת SMS שיחות והודעות</div>
+      <div class="regular-style">{{item.bodyFirstTitle}}</div>
       <hr>
-    <div class="package-size-deal">חבילת גלישה בנפח 10GB</div>
+    <div class="package-size-deal">{{item.bodySecondTitle}}</div>
     <hr>
-    <div class="regular-style">מחיר קבוע לשנתיים</div>
+    <div class="regular-style">{{item.bodyThirdTitle}}</div>
     <hr>
     <div class="inner-container">
       <img class="inner-img" src="../assets/images/gift_icon.png" alt="">
-      <div class="inner-title">בלעדי למזמינים באתר</div>
-      <div class="regular-style">המחיר נשאר לשנתיים</div>
+      <div class="inner-title">{{item.bodyFirstInnerTitle}}</div>
+      <div class="regular-style">{{item.bodySecondInnerTitle}}</div>
     </div>
     <button class="btn-next">להצטרפות >></button>
-
   </div>
-
   </div>
 </div>
